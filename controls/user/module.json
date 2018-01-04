@@ -1,0 +1,27 @@
+{
+  "type": "control",
+  "id": "user-control",
+  "dependencies": {
+    "controls": [
+      "paper-button"
+    ],
+    "code": {
+      "application/model/code": "model"
+    }
+  },
+  "properties": {
+    "userId": "String"
+  },
+  "methods": [
+    "refresh"
+  ],
+  "js": [
+    "js/controller.js",
+    "js/state.js",
+    "js/actions.js"
+  ],
+  "jsx": {
+    "path": "jsx",
+    "files": "*"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "trivias",
+  "version": "0.0.1",
+  "author": "socites",
+  "files": [
+    "library/"
+  ],
+  "dependencies": {
+    "beyond": ">=0.2.0"
+  },
+  "engines": {
+    "node": ">= 6.9.4"
+  }
+}

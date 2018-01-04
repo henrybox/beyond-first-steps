@@ -1,0 +1,11 @@
+{
+  "code": {
+    "js": {
+      "files": [
+        "user.js",
+        "users.js",
+        "define.js"
+      ]
+    }
+  }
+}
