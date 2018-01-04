@@ -3,11 +3,8 @@
   "id": "users-control",
   "dependencies": {
     "controls": [
-      // Polymer elements, Which ones are installed?
       "paper-button",
-      "paper-icon-item",
-      // Child module - dependency?
-      "user-control"
+      "paper-icon-item"
     ],
     "code": {
       "application/model/code": "model"
