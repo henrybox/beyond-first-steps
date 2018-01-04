@@ -4,12 +4,14 @@ exports = module.react.createControl({
 
         var output = [];
 
+        console.log(state);
+
         if (!state.ready) {
             output.push(
                 <paper-button key="button" raised onClick={actions.initialise}>
                     Initialise
                 </paper-button>
-                  );
+            );
         }
         else {
             output.push(

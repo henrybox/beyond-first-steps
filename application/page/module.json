@@ -5,7 +5,7 @@
       "controls": [
         "paper-toolbar",
         "paper-button",
-        "user-control"
+        "users-control"
       ]
     },
     "js": "page.js",
