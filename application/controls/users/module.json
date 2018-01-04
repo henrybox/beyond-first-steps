@@ -1,0 +1,31 @@
+{
+  "type": "control",
+  "id": "users-control",
+  "dependencies": {
+    "controls": [
+      // Polymer elements, Which ones are installed?
+      "paper-button",
+      "paper-icon-item",
+      // Child module - dependency?
+      "user-control"
+    ],
+    "code": {
+      "application/model/code": "model"
+    }
+  },
+  "properties": {
+    "userId": "String"
+  },
+  "methods": [
+    "refresh"
+  ],
+  "js": [
+    "js/controller.js",
+    "js/state.js",
+    "js/actions.js"
+  ],
+  "jsx": {
+    "path": "jsx",
+    "files": "*"
+  }
+}

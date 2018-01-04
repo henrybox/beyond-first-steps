@@ -2,7 +2,7 @@ function Page($container, vdir, dependencies) {
     "use strict";
 
     var texts = {
-        'title': 'My first page'
+        'title': 'Users list'
     };
     var $page = $(module.render('page', texts));
     $container

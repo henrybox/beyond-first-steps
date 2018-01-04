@@ -24,7 +24,7 @@ exports = module.react.createControl({
         );
 
         return (
-            <div>{output}</div>
+            <div>Render: {output}</div>
         );
 
     }
