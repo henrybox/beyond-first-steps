@@ -9,6 +9,7 @@ function Controller(change, dependencies, properties, specs) {
         }
     });
 
+    users.bind('change', change);
     users.fetch();
 
     // Defining ready property
