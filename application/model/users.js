@@ -4,6 +4,9 @@ function Users() {
     var events = new Events({'bind': this});
 
     var entries;
+    var newEntry;
+    var inputContent;
+
     Object.defineProperty(this, 'entries', {
         'get': function () {
             return entries;
@@ -27,24 +30,50 @@ function Users() {
         fetching = true;
         events.trigger('change');
 
-        setTimeout(function () {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(
+                function (response) {
+                    if (response.status !== 200) {
+                        console.log('Looks like there was a problem. Status Code: ' +
+                            response.status);
+                        return;
+                    }
 
-            entries = [
-                {
-                    'id': 1,
-                    'name': 'Guido'
-                },
-                {
-                    'id': 2,
-                    'name': 'Juan'
-                }];
+                    // Examine the text in the response
+                    response.json().then(function (data) {
+                        entries = data;
 
-            fetching = false;
-            fetched = true;
-            events.trigger('change');
-
-        }, 3000);
+                        fetching = false;
+                        fetched = true;
+                        events.trigger('change');
+                    });
+                }
+            )
+            .catch(function (err) {
+                console.log('Fetch Error :-S', err);
+            });
 
     };
+
+    this.removeUser = function (id) {
+        entries = entries.filter(function (u) {
+            return u.id !== id;
+        });
+        events.trigger('change');
+    };
+
+    this.handleChange = function(view){
+      events.trigger('change');
+    };
+
+    this.addUser = function(name){
+        newEntry = {name: name};
+        if(newEntry.name !== undefined && newEntry.name.length > 0){
+            entries.push(newEntry);
+            events.trigger('change');
+        }
+    };
+
+
 
 }

@@ -4,7 +4,12 @@
   "dependencies": {
     "controls": [
       "paper-button",
-      "paper-icon-item"
+      "paper-item",
+      "iron-icon",
+      "iron-icons",
+      "iron-iconset",
+      "paper-spinner",
+      "iron-form",
     ],
     "code": {
       "application/model/code": "model"

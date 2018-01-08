@@ -5,6 +5,8 @@ function updateState(controller, state) {
     var collection = controller.users;
 
     state.fetching = collection.fetching;
+    state.fetched = collection.fetched;
     state.entries = collection.entries;
+    state.name = collection.inputContent;
 
 }
