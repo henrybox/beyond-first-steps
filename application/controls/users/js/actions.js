@@ -8,7 +8,7 @@ function Actions(controller, properties) {
 
     this.changeName = function (event) {
         var value = $(event.currentTarget).val();
-        controller.inputContent = value;
+        controller.name = value;
     };
 
     this.addUser = function (event) {

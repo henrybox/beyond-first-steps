@@ -12,6 +12,17 @@ function Controller(change, dependencies, properties, specs) {
     users.bind('change', change);
     users.fetch();
 
+    var name;
+    Object.defineProperty(this, 'name', {
+        'get': function () {
+            return name;
+        },
+        'set': function (value) {
+            name = value;
+            events.trigger('change');
+        }
+    });
+
     // Defining ready property
     Object.defineProperty(this, 'ready', {
         'get': function () {

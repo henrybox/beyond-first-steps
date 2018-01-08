@@ -7,6 +7,6 @@ function updateState(controller, state) {
     state.fetching = collection.fetching;
     state.fetched = collection.fetched;
     state.entries = collection.entries;
-    state.name = collection.inputContent;
+    state.name = collection.name;
 
 }
