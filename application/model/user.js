@@ -3,21 +3,26 @@ function User(id) {
 
     var events = new Events({'bind': this});
 
-    var users = {
-        '1': 'Funes Mori',
-        '2': 'Benedeto',
-        '3': 'Cavenaghi'
-    };
-
     Object.defineProperty(this, 'id', {
         'get': function () {
             return id;
         }
     });
 
+    var name;
     Object.defineProperty(this, 'name', {
         'get': function () {
             return users[id];
+        },
+        'set': function (value) {
+
+            if (name === value) {
+                return;
+            }
+
+            name = value;
+            events.trigger('change');
+
         }
     });
 

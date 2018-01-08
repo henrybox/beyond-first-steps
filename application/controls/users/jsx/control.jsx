@@ -9,7 +9,7 @@ exports = module.react.createControl({
 
                 <iron-form key="input-container">
                     <form action={actions.addUser}>
-                        <input type="text" key="input" value={state.name} onChange={actions.handleChange} />
+                        <input type="text" key="input" value={state.name} onChange={actions.handleChange}/>
                     </form>
                 </iron-form>
 
