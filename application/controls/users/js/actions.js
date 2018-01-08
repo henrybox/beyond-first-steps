@@ -6,12 +6,12 @@ function Actions(controller, properties) {
         return controller.users.removeUser(id);
     };
 
-    this.handleChange = function(event){
+    this.changeName = function (event) {
         var value = $(event.currentTarget).val();
         controller.inputContent = value;
     };
 
-    this.addUser = function(event){
+    this.addUser = function (event) {
         event.preventDefault();
         var name = $(event.currentTarget).value;
         controller.users.addUser(name);
