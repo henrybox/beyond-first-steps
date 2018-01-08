@@ -10,6 +10,7 @@ function User(id) {
     });
 
     var name;
+
     Object.defineProperty(this, 'name', {
         'get': function () {
             return users[id];
