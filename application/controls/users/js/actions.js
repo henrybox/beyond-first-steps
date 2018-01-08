@@ -13,7 +13,6 @@ function Actions(controller, properties) {
 
     this.addUser = function (event) {
         event.preventDefault();
-        var name = $(event.currentTarget).value;
         controller.users.addUser(controller.name);
         return false;
     };
