@@ -4,8 +4,6 @@ function Users() {
     var events = new Events({'bind': this});
 
     var entries;
-    var newEntry;
-    var inputContent;
 
     Object.defineProperty(this, 'entries', {
         'get': function () {
@@ -62,18 +60,18 @@ function Users() {
         events.trigger('change');
     };
 
-    this.handleChange = function(view){
-      events.trigger('change');
-    };
+    this.addUser = function (name) {
 
-    this.addUser = function(name){
-        newEntry = {name: name};
-        if(newEntry.name !== undefined && newEntry.name.length > 0){
-            entries.push(newEntry);
-            events.trigger('change');
+        if (!name) {
+            beyond.showWarning('Ingrese un nombre de usuario');
+            return;
         }
-    };
 
+        var newEntry = {name: name};
+        entries.push(newEntry);
+        events.trigger('change');
+
+    };
 
 
 }
