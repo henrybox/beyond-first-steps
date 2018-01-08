@@ -3,6 +3,7 @@ function Users() {
 
     var events = new Events({'bind': this});
 
+    var id = 1000;
     var entries;
 
     Object.defineProperty(this, 'entries', {
@@ -67,7 +68,8 @@ function Users() {
             return;
         }
 
-        var newEntry = {name: name};
+        id++;
+        var newEntry = {'id': id, 'name': name};
         entries.push(newEntry);
         events.trigger('change');
 
