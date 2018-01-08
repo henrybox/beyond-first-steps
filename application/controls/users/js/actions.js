@@ -14,7 +14,6 @@ function Actions(controller, properties) {
     this.addUser = function (event) {
         event.preventDefault();
         controller.users.addUser(controller.name);
-        return false;
     };
 
 }
