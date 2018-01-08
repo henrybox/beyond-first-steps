@@ -9,7 +9,7 @@
       "iron-icons",
       "iron-iconset",
       "paper-spinner",
-      "iron-form",
+      "iron-form"
     ],
     "code": {
       "application/model/code": "model"
