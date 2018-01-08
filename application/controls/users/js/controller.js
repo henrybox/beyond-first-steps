@@ -19,7 +19,7 @@ function Controller(change, dependencies, properties, specs) {
         },
         'set': function (value) {
             name = value;
-            events.trigger('change');
+            change();
         }
     });
 
