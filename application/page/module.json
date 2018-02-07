@@ -1,15 +1,14 @@
 {
-  "page": {
-    "route": "home",
-    "dependencies": {
-      "controls": [
-        "paper-toolbar",
-        "paper-button",
-        "users-control"
-      ]
-    },
-    "js": "page.js",
-    "html": "page.html",
-    "less": "styles.less"
-  }
+  "type": "page",
+  "route": "home",
+  "dependencies": {
+    "controls": [
+      "paper-toolbar",
+      "paper-button",
+      "users-control"
+    ]
+  },
+  "js": "page.js",
+  "html": "page.html",
+  "less": "styles.less"
 }
